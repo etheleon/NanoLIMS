@@ -43,3 +43,4 @@ RUN service apache2 start && \
     mysql -u root -pAdmin2015 < nanolims_demo.sql && \
     service apache2 stop && \
     service mysql stop && \
+

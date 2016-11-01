@@ -24,7 +24,7 @@ COPY connection.txt /var/www/nanolims_config/connection.txt
 
 
 WORKDIR /var/www/
-RUN git clone https://github.com/etheleon/NanoLIMS.git /var/www/nanolims && \
+RUN git clone -b docker https://github.com/etheleon/NanoLIMS.git /var/www/nanolims && \
     mv /var/www/nanolims/Important\ Accessories.zip /var/www/ &&
     unzip /var/www/Important\ Accessories.zip 
 

@@ -38,9 +38,7 @@ RUN chmod o+r /var/www/nanolims_config/connection.txt && \
 #remove default
 RUN rm -rf /etc/apache2/sites-available/examples.com.conf /etc/apache2/sites-enabled/examples.com.conf
 
-RUN service apache2 start && \
-    service mysql start && \
-    mysql -u root -pAdmin2015 < nanolims_demo.sql && \
-    service apache2 stop && \
+RUN service mysql start && \
+    mysql -u root -pAdmin2015 < /var/www/nanolims/nanolims_demo.sql && \
     service mysql stop
 

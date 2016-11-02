@@ -1,3 +1,6 @@
+CREATE DATABASE nanolims_demo;
+USE nanolims_demo;
+
 -- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net
@@ -1281,10 +1284,10 @@ ADD CONSTRAINT `store_user_things_ibfk_1` FOREIGN KEY (`sample_name`) REFERENCES
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-CREATE USER nanolims@localhost IDENTIFIED BY 1231234
-GRANT INSERT ON nanolims.* TO nanolims@localhost;
-GRANT SELECT ON nanolims.* TO nanolims@localhost;
-GRANT UPDATE ON nanolims.* TO nanolims@localhost;
-GRANT DELETE ON nanolims.* TO nanolims@localhost;
+CREATE USER 'nanolims'@'localhost' IDENTIFIED BY '1231234'
+GRANT INSERT ON nanolims_demo.* TO 'nanolims'@'localhost';
+GRANT SELECT ON nanolims_demo.* TO 'nanolims'@'localhost';
+GRANT UPDATE ON nanolims_demo.* TO 'nanolims'@'localhost';
+GRANT DELETE ON nanolims_demo.* TO 'nanolims'@'localhost';
 FLUSH PRIVILEGES;
 
